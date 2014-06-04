@@ -19,7 +19,7 @@ func main() {
 	}
 	defer db.Close()
 
-	rows, err := db.Query("select id, name from users where id = ?", 1)
+	rows, err := db.Query("select id, name from users")
 	if err != nil {
 		log.Fatal(err)
 	}
